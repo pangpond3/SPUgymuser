@@ -19,7 +19,7 @@
   import { initializeApp } from "https://www.gstatic.com/firebasejs/10.11.0/firebase-app.js";
   import { getAnalytics } from "https://www.gstatic.com/firebasejs/10.11.0/firebase-analytics.js";
   import { getDatabase, set, ref, update } from "https://www.gstatic.com/firebasejs/10.11.0/firebase-database.js";
-  import { getAuth, signInWithEmailAndPassword } from "https://www.gstatic.com/firebasejs/10.11.0/firebase-auth.js";
+  import { getAuth, signInWithEmailAndPassword, signOut } from "https://www.gstatic.com/firebasejs/10.11.0/firebase-auth.js";
   // TODO: Add SDKs for Firebase products that you want to use
   // https://firebase.google.com/docs/web/setup#available-libraries
 
@@ -64,7 +64,19 @@
 
     alert(errorMessage);
   });
+logOut.addEventListener('click',(e)=>{
+signOut(auth).then(() => {
+  // Sign-out successful.
+    alert('user loged out');
+}).catch((error) => {
+  // An error happened.
+const errorCode = error.code;
+    const errorMessage = error.message;
 
+    alert(errorMessage);
+});
+
+})
 
 
 </script>
