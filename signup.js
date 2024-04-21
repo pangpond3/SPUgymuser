@@ -25,8 +25,8 @@
   const email = document.getElementById('email').value; 
   const password = document.getElementById('password').value; 
 
-  const sighUp = document.getElementById('sighUp');
-  SubmitEvent.addEventListener("click",function (event){
+  const submit = document.getElementById('submit');
+  Submit.addEventListener("click",function (event){
     event.preventDefault()
     alert(5)
   })
