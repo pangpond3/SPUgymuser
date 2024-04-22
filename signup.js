@@ -37,7 +37,7 @@
     .then((userCredential) => {
       const user = userCredential.user;
       alert("User Sign Up")
-      window.location.href ="index.html"
+      window.location.href ="index.html";
     })
     .catch((error) => {
       const errorCode = error.code;
