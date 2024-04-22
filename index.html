@@ -18,11 +18,11 @@
                         <form>
                             <div class="form-group">
                                 <label for="email">Email</label>
-                                <input type="text" class="form-control" id="email" placeholder="Enter your email">
+                                <input type="text" class="form-control" id="Email" placeholder="Enter your email">
                             </div>
                             <div class="form-group">
                                 <label for="password">Password</label>
-                                <input type="password" class="form-control" id="password" placeholder="Enter your password">
+                                <input type="password" class="form-control" id="Password" placeholder="Enter your password">
                             </div>
                             <a href="sign_up.html">"sign up here"</a>
                             <button type="submit" class="btn btn-primary btn-block" id="logIn" name="login_submit">Login</button>
@@ -68,8 +68,8 @@
   const auth = getAuth();
 
   logIn.addEventListener('click',(e) =>{
-    var email = document.getElementById('email').value;
-    var password = document.getElementById('password').value;
+    var email = document.getElementById('Email').value;
+    var password = document.getElementById('Password').value;
 
     signInWithEmailAndPassword(auth, email, password)
   .then((userCredential) => {
