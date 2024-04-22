@@ -27,6 +27,7 @@
   const auth = getAuth(app);
 
   const email = document.getElementById('email').value; 
+  email: string = '';
   const password = document.getElementById('password').value; 
 
   const submit = document.getElementById('submit');
