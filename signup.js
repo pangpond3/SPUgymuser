@@ -24,6 +24,7 @@
   // Initialize Firebase
   const app = initializeApp(firebaseConfig);
   const analytics = getAnalytics(app);
+  const auth = getAuth(app);
 
   const email = document.getElementById('email').value; 
   const password = document.getElementById('password').value; 
