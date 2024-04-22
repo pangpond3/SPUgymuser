@@ -36,13 +36,13 @@
     createUserWithEmailAndPassword(auth, email, password)
     .then((userCredential) => {
       const user = userCredential.user;
-      alert("User Sign Up")
+      alert("User Sign Up");
       window.location.href ="index.html";
     })
     .catch((error) => {
       const errorCode = error.code;
       const errorMessage = error.message;
-      alert(errorMessage)
+      alert(errorMessage);
     })
 
   })
