@@ -29,20 +29,17 @@
   const email = document.getElementById('Email').value; 
   const password = document.getElementById('Password').value; 
 
-  const submit = document.getElementById('submit');
-  submit.addEventListener("click", function(event) {
-
-    event.preventDefault()
-    createUserWithEmailAndPassword(auth, email, password)
-    .then((userCredential) => {
-      const user = userCredential.user;
-      alert("User Sign Up");
-      window.location.href ="index.html";
-    })
-    .catch((error) => {
-      const errorCode = error.code;
-      const errorMessage = error.message;
-      alert(errorMessage);
-    })
-
-  })
+        // Sign Up
+        const submit = document.querySelector('submit');
+        submit.addEventListener('click', e => {
+            e.preventDefault();
+            const email = document.querySelector('#email').value;
+            const password = document.querySelector('#password').value;
+            auth.createUserWithEmailAndPassword(email, password)
+                .then(cred => {
+                    console.log('User signed up!');
+                })
+                .catch(error => {
+                    console.error('Error signing up:', error.message);
+                });
+        });
