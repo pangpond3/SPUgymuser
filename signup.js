@@ -26,9 +26,8 @@
   const analytics = getAnalytics(app);
   const auth = getAuth(app);
 
-  const email = document.getElementById('email').value; 
-  email: string = '';
-  const password = document.getElementById('password').value; 
+  const email = document.getElementById('Email').value; 
+  const password = document.getElementById('Password').value; 
 
   const submit = document.getElementById('submit');
   submit.addEventListener("click", function(event) {
